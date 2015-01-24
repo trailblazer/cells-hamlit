@@ -10,7 +10,7 @@ module Cell
 
     def set_output_buffer_with_haml(new_buffer)
       if is_haml?
-        if Haml::Util.rails_xss_safe? && new_buffer.is_a?(ActiveSupport::SafeBuffer)
+        if ::Haml::Util.rails_xss_safe? && new_buffer.is_a?(ActiveSupport::SafeBuffer)
           new_buffer = String.new(new_buffer)
         end
         haml_buffer.buffer = new_buffer
@@ -59,6 +59,10 @@ module Cell
     # From FormTagHelper. why do they escape every possible string? why?
     def form_tag_in_block(html_options, &block)
       content = capture(&block)
+      "#{form_tag_html(html_options)}" << content << "</form>"
+    end
+
+    def form_tag_with_body(html_options, content)
       "#{form_tag_html(html_options)}" << content << "</form>"
     end
 
