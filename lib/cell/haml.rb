@@ -63,7 +63,7 @@ module Cell
     end
 
     def form_tag_with_body(html_options, content)
-      "#{form_tag_html(html_options)}" << content << "</form>"
+      "#{form_tag_html(html_options)}" << content.to_s << "</form>"
     end
 
     def form_tag_html(html_options)
