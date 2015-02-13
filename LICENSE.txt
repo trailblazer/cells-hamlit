@@ -1,4 +1,4 @@
-Copyright (c) 2014-2014 Abdelkader Boudih & Nick Sutterer
+Copyright (c) 2014-2015 Abdelkader Boudih & Nick Sutterer
 
 MIT License
 

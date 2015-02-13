@@ -5,7 +5,7 @@ gemspec
 platforms :mri_20, :mri_21 do
   gem 'pry-byebug'
 end
-gem 'cells', github: 'apotonick/cells', branch: 'cells-4'
+gem 'cells', github: 'apotonick/cells'
 gem 'railties'
 gem 'actionpack'
 gem 'actionview'
