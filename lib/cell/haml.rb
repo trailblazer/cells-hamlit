@@ -1,4 +1,3 @@
-require 'cells'
 require 'tilt/haml'
 
 module Cell

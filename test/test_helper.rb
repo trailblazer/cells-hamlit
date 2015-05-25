@@ -1,13 +1,10 @@
-begin
-  require 'byebug'
-rescue LoadError
-end
-require 'minitest/reporters'
-Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new]
+require "pp"
 require 'minitest/autorun'
 
 ENV['RAILS_ENV'] = 'test'
 
-require 'cells'
+
+require "cells"
 require_relative 'dummy/config/environment'
-require 'cell/haml'
+
+require "cells-haml"
