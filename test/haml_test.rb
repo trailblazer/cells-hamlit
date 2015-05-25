@@ -34,6 +34,8 @@ class HamlTest < MiniTest::Spec
   <ul>Hallo
   </ul>
 </form>
+Weiter!
+Bonjour!
 }
 end
 
