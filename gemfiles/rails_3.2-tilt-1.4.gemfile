@@ -3,8 +3,7 @@
 source "https://rubygems.org"
 
 #gem "cells", :github => "apotonick/cells"
-gem "cells", path: "../../cells"
-gem "appraisal"
+# gem "cells", path: "../../cells"
 gem "railties", "~> 3.2.0"
 gem "activemodel"
 gem "minitest", "~> 4.0"
@@ -12,5 +11,3 @@ gem "tilt", "~> 1.4"
 gem "tzinfo"
 
 gemspec :path => "../"
-
-# gem "erbse", path: "../../erbse"

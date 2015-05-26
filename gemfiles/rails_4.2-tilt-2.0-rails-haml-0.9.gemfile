@@ -3,10 +3,12 @@
 source "https://rubygems.org"
 
 # gem "cells", :github => "apotonick/cells"
-#gem "cells", path: "../../cells"
+gem "cells", path: "../../cells"
+gem "appraisal"
 gem "railties", "~> 4.2.0"
 gem "activemodel"
 gem "minitest", "~> 5.2"
-gem "tilt", "~> 3.0"
+gem "tilt", "~> 2.0"
+gem "haml-rails", "~> 0.9.0"
 
 gemspec :path => "../"

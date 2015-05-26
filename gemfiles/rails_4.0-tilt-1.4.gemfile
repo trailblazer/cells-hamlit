@@ -2,11 +2,11 @@
 
 source "https://rubygems.org"
 
-# gem "cells", :github => "apotonick/cells"
-#gem "cells", path: "../../cells"
-gem "railties", "~> 4.2.0"
+#gem "cells", :github => "apotonick/cells"
+# gem "cells", path: "../../cells"
+gem "railties", "~> 4.0.0"
 gem "activemodel"
-gem "minitest", "~> 5.2"
+gem "minitest", "~> 4.0"
 gem "tilt", "~> 1.4"
 
 gemspec :path => "../"
