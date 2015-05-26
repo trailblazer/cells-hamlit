@@ -17,8 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'cells', '~> 4.0.0.beta3'
-  spec.add_runtime_dependency 'haml', '~> 4.0'
+  spec.add_dependency 'cells', '~> 4.0.0.beta3'
+  spec.add_dependency 'haml', '~> 4.0'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 end
