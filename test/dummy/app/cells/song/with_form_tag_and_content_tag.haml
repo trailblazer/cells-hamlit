@@ -4,12 +4,26 @@ Word.
   = link_to "/rails/sucks" do
     hallo
 
-  = content_tag( :ul) do
+  = content_tag(:ul) do
     Hallo
 
+- answer = "<script>oui!</script>"
+
+-# test content rendering in capture.
 - content = capture do
   Bonjour!
+  = link_to "Coffee?", "/coffee"
+  <b>Yes please!</b>
+  = answer
 
 Weiter!
 
 = content
+
+- breadcrumbs = capture do
+  - [link_to("1", "/1"), link_to("2", "/2")].join("+")
+
+= breadcrumbs
+
+= current_page
+= form_tag_with_body( {url: "/rails/escapes/too/much"}, %{<input type="button"/>}).html_safe

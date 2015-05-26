@@ -36,6 +36,12 @@ class HamlTest < MiniTest::Spec
 </form>
 Weiter!
 Bonjour!
+<a href=\"/coffee\">Coffee?</a>
+<b>Yes please!</b>
+<script>oui!</script>
+<a href=\"/1\">1</a>+<a href=\"/2\">2</a>
+<b>No current page!<b>
+<form url=\"/rails/escapes/too/much\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input type=\"button\"/></form>
 }
 end
 
