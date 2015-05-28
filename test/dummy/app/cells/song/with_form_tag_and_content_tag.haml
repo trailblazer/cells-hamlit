@@ -1,6 +1,7 @@
 Word.
 
 = form_tag "/erubis/is/horribly/outdated" do
+  = text_field_tag :id
   = link_to "/rails/sucks" do
     hallo
 
@@ -27,3 +28,7 @@ Weiter!
 
 = current_page
 = form_tag_with_body( {url: "/rails/escapes/too/much"}, %{<input type="button"/>})
+
+
+= form_for OpenStruct.new, url: "/", as: "open" do |f|
+  = f.text_field :id
