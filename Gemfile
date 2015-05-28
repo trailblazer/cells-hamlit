@@ -11,3 +11,4 @@ gem 'actionpack'
 gem 'actionview'
 gem 'appraisal'
 gem 'minitest-reporters'
+# gem "haml", github: "haml/haml" # we need 4.1.

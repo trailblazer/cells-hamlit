@@ -16,6 +16,10 @@ module Cell
       extra_tags = extra_tags_for_form(html_options)
       "#{tag(:form, html_options, true) + extra_tags}"
     end
+
+    def form_for(*args, &block) # TODO: remove this once Haml 4.1 is out. the form_for_with_haml is buggy.
+      form_for_without_haml(*args, &block)
+    end
   end
 
   ViewModel.template_engine = :haml
