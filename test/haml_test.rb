@@ -3,10 +3,11 @@ require 'test_helper'
 class HamlTest < MiniTest::Spec
   it { Cell::ViewModel.template_engine.must_equal :haml }
 
-
   let (:controller) { ApplicationController.new.tap { |ctl| ctl.send("request=", ActionDispatch::Request.new({})) } }
   let (:song_cell) { SongCell.new(controller) }
 
+  # render in render
+  it { song_cell.(:render_in_render).must_equal "<b>Questions: Yes!</b>\n" }
 
   # URL helpers work in cell instance.
   it { song_cell.songs_path.must_equal "/songs" }
