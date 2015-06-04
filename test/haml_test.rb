@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class HamlTest < MiniTest::Spec
-  it { Cell::ViewModel.template_engine.must_equal :haml }
-
   let (:controller) { ApplicationController.new.tap { |ctl| ctl.send("request=", ActionDispatch::Request.new({})) } }
   let (:song_cell) { SongCell.new(controller) }
 

@@ -1,8 +1,12 @@
 class SongCell < Cell::ViewModel
   self.view_paths = ["test/dummy/app/cells"]
 
-  include ActionView::Helpers::FormHelper
+
   include Cell::Haml
+
+  def protect_against_forgery?
+    false
+  end
 
   def with_form_tag_and_content_tag
     render
