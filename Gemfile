@@ -2,13 +2,9 @@ source 'https://rubygems.org'
 
 # Specify your gem's dependencies in cells-haml.gemspec
 gemspec
-platforms :mri_20, :mri_21 do
-  gem 'pry-byebug'
-end
-gem 'cells', github: 'apotonick/cells'
+
+gem 'cells', path: "../cells"#github: 'apotonick/cells'
 gem 'railties'
 gem 'actionpack'
 gem 'actionview'
-gem 'appraisal'
-gem 'minitest-reporters'
-# gem "haml", github: "haml/haml" # we need 4.1.
+gem "haml", github:"haml/haml" #"4.1.0.beta1" #github: "haml/haml" # we need 4.1.

@@ -10,3 +10,5 @@ gem "minitest", "~> 5.2"
 gem "tilt", "~> 3.0"
 
 gemspec :path => "../"
+
+gem "haml", github:"haml/haml"

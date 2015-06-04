@@ -12,3 +12,5 @@ gem "tzinfo"
 # gem "haml", github: "haml/haml"
 
 gemspec :path => "../"
+
+gem "haml", github:"haml/haml"

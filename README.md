@@ -8,11 +8,11 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'cells-haml'
+gem "haml", github: "haml/haml"
 ```
 
-This will set `ViewModel.template_engine = :haml.
+This gem currently only works properly with Haml 4.1, which is not yet released.
 
-And that's all you need to do.
 
 ## HTML Escaping
 
@@ -30,19 +30,6 @@ end
 ```
 
 If that doesn't work, [read the docs](http://trailblazerb.org/gems/cells/cells4.html#html-escaping).
-
-## `form_for` Problems
-
-Haml < 4.1.0 overrides many Rails helpers and introduces bugs. They are fixed in Haml 4.1 (by simply removing the code). In case you're on 4.0.6 and `form_for` doesn't render properly, include `Cell::Haml`.
-
-```ruby
-class SongCell < Cell::ViewModel
-  include ActionView::Helpers::FormHelper
-  include Cell::Haml # include Haml _after_ AV helpers.
-
-  # ..
-end
-```
 
 ## Dependencies
 
