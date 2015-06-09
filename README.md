@@ -8,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'cells-haml'
-gem "haml", github: "haml/haml"
+gem "haml", github: "haml/haml", ref: "7c7c169"
 ```
 
 This gem currently only works properly with Haml 4.1, which is not yet released.

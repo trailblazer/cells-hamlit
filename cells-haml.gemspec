@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'cells', '~> 4.0.0.beta6'
-  spec.add_dependency 'haml', '>= 5.0.0.beta2'
+  spec.add_dependency 'haml', '>= 4.1.0.beta.1'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 end
