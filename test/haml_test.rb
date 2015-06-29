@@ -39,6 +39,9 @@ class HamlTest < MiniTest::Spec
 #{form_tag}
   #{input_tag}
   <a href=\"/rails/sucks\">hallo
+  <div class='row'>
+    Cool
+  </div>
   </a>
   <ul>Hallo
   </ul>
