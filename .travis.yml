@@ -1,4 +1,8 @@
 cache: bundler
+rvm:
+  - 2.0
+  - 2.1
+  - 2.2
 gemfile:
   - gemfiles/rails_4.2-tilt-1.4.gemfile
   - gemfiles/rails_4.2-tilt-2.0.gemfile
