@@ -1,18 +1,19 @@
-# Cells::Haml
+# Cells::Hamlit
 
-Haml support for Cells.
+Hamlit support for Cells. [Hamlit](https://github.com/k0kubun/hamlit) is a faster implementation of Haml.
+
+## Beta
+
+This gem is not safe for work at the moment!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cells-haml'
-gem "haml", github: "haml/haml", ref: "7c7c169"
+gem "cells-hamlit"
+gem "hamlit"
 ```
-
-This gem currently only works properly with Haml 4.1, which is not yet released.
-
 
 ## HTML Escaping
 
@@ -23,7 +24,7 @@ As a first step, try this and see if it helps.
 ```ruby
 class SongCell < Cell::ViewModel
   include ActionView::Helpers::FormHelper
-  include Cell::Haml # include Haml _after_ AV helpers.
+  include Cell::Hamlit # include Haml _after_ AV helpers.
 
   # ..
 end

@@ -1,12 +1,11 @@
-require 'tilt/haml'
+require 'hamlit'
 
 module Cell
-  module Haml
+  module Hamlit
     def template_options_for(options)
       {
-        template_class: ::Tilt::HamlTemplate,
+        template_class: ::Hamlit::Template,
         escape_html:    false,
-        escape_attrs:   false,
         suffix:         "haml"
       }
     end

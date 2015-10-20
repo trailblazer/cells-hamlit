@@ -11,4 +11,4 @@ gem "tilt", "~> 1.4"
 
 gemspec :path => "../"
 
-gem "haml", github:"haml/haml"
+gem "hamlit"

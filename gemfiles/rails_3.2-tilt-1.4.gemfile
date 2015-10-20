@@ -9,8 +9,7 @@ gem "activemodel"
 gem "minitest", "~> 4.0"
 gem "tilt", "~> 1.4"
 gem "tzinfo"
-# gem "haml", github: "haml/haml"
 
 gemspec :path => "../"
 
-gem "haml", github:"haml/haml"
+gem "hamlit"

@@ -2,7 +2,7 @@ class SongCell < Cell::ViewModel
   self.view_paths = ["test/dummy/app/cells"]
 
 
-  include Cell::Haml
+  include Cell::Hamlit
 
   def protect_against_forgery?
     false
