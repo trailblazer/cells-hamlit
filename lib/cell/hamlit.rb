@@ -1,5 +1,5 @@
-require 'hamlit'
-require 'hamlit/block'
+require "hamlit"
+require "hamlit/block"
 
 module Cell
   module Hamlit
@@ -10,8 +10,6 @@ module Cell
         suffix:         "haml"
       }
     end
-
-    attr_writer :output_buffer
 
     # include ActionView::Helpers::FormHelper
 
@@ -44,8 +42,8 @@ module Cell
     #   form_for_without_haml(*args, &block)
     # end
 
-    # def content_tag(name, content_or_options_with_block=nil, options=nil, escape=false, &block)
-    #   super
-    # end
+    def content_tag(name, content_or_options_with_block=nil, options=nil, escape=false, &block)
+      super
+    end
   end
 end

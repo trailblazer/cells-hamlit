@@ -16,9 +16,7 @@ class HamlitTest < MiniTest::Spec
   # content_tag { content_tag { } }
   it do song_cell.(:with_content_tag_and_content_tag).must_equal %{<span>Title:
 <div>Still Knee Deep
-</div>
-</span>
-}
+</div></span>}
   end
 
   # form_tag { content_tag { } }
@@ -35,16 +33,16 @@ class HamlitTest < MiniTest::Spec
     form_for_tag = "<form class=\"new_open\" id=\"new_open\" action=\"/\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input type=\"text\" name=\"open[id]\" id=\"open_id\" />"
     form_for_tag = "<form accept-charset=\"UTF-8\" action=\"/\" class=\"new_open\" id=\"new_open\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /></div><input id=\"open_id\" name=\"open[id]\" size=\"30\" type=\"text\" />" if ActionPack::VERSION::MAJOR == 3
 
-    song_cell.(:with_form_tag_and_content_tag).must_equal %{Word.
+    song_cell.(:with_form_tag_and_content_tag).gsub("\n", "").must_equal %{Word.
 #{form_tag}
-  #{input_tag}
-  <a href=\"/rails/sucks\">hallo
-  <div class='row'>
-    Cool
-  </div>
-  </a>
-  <ul>Hallo
-  </ul>
+#{input_tag}
+<a href=\"/rails/sucks\">hallo
+<div class='row'>
+Cool
+</div>
+</a>
+<ul>Hallo
+</ul>
 </form>
 Weiter!
 Bonjour!
@@ -56,7 +54,7 @@ Bonjour!
 #{form_with_body_tag}
 #{form_for_tag}
 </form>
-}
+}.gsub("\n", "")
   end
 
   describe "block capture" do

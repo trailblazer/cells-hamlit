@@ -2,9 +2,6 @@
 
 Hamlit support for Cells. [Hamlit](https://github.com/k0kubun/hamlit) is a faster implementation of Haml.
 
-## Beta
-
-This gem is not safe for work at the moment!
 
 ## Installation
 
@@ -13,7 +10,19 @@ Add this line to your application's Gemfile:
 ```ruby
 gem "cells-hamlit"
 gem "hamlit"
+gem "hamlit-block"
 ```
+
+Note that you need [hamlit-block](https://github.com/k0kubun/hamlit-block), too, for `capture` support. This will slightly change semantics with blocks, as follows. # TODO
+
+## Capture
+
+```haml
+- content = capture do
+  = "takashi is king!"
+```
+
+To capture strings, the `=` directive is needed in the block.
 
 ## HTML Escaping
 
