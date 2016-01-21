@@ -1,3 +1,7 @@
+# 0.1.1
+
+* Now using `hamlit-block` for capturing.
+
 # 0.1.0
 
 Start based on cells-haml
