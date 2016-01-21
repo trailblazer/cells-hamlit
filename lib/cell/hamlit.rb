@@ -1,18 +1,19 @@
 require 'hamlit'
+require 'hamlit/block'
 
 module Cell
   module Hamlit
     def template_options_for(options)
       {
-        template_class: ::Hamlit::Template,
         escape_html:    false,
+        template_class: ::Hamlit::Template,
         suffix:         "haml"
       }
     end
 
     attr_writer :output_buffer
 
-    include ActionView::Helpers::FormHelper
+    # include ActionView::Helpers::FormHelper
 
     # From FormTagHelper. why do they escape every possible string? why?
     def form_tag_in_block(html_options, &block)
@@ -22,6 +23,16 @@ module Cell
 
     def form_tag_with_body(html_options, content)
       "#{form_tag_html(html_options)}" << content.to_s << "</form>"
+    end
+
+    # with fine Hamlit, we don't need magical output buffers since yielding a block returns the
+    # content.
+    def with_output_buffer(block_buffer=ViewModel::OutputBuffer.new)
+      yield
+    end
+
+    def capture(*args)
+      yield(*args)
     end
 
     # def form_tag_html(html_options)
