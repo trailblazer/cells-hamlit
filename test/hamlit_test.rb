@@ -7,6 +7,9 @@ class HamlitTest < MiniTest::Spec
   # render in render
   it { song_cell.(:render_in_render).must_equal "<b>Questions: Yes!\n</b>\n" }
 
+  # Original Hamlit's behavior
+  it { song_cell.(:render_inside_block).must_equal "0\n1\n2\n" }
+
   # URL helpers work in cell instance.
   it { song_cell.songs_path.must_equal "/songs" }
 
