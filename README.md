@@ -13,7 +13,7 @@ gem "hamlit"
 gem "hamlit-block"
 ```
 
-Note that you need [hamlit-block](https://github.com/k0kubun/hamlit-block), too, for `capture` support. This will slightly change semantics with blocks, as follows. # TODO
+Note that you need [hamlit-block](https://github.com/hamlit/hamlit-block), too, for `capture` support. This will slightly change semantics with blocks, as follows. # TODO
 
 ## Capture
 
