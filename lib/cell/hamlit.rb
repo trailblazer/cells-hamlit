@@ -1,5 +1,4 @@
 require "hamlit"
-require "hamlit/block"
 
 module Cell
   module Hamlit

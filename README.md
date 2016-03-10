@@ -9,11 +9,17 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem "cells-hamlit"
-gem "hamlit"
-gem "hamlit-block"
 ```
 
-Note that you need [hamlit-block](https://github.com/hamlit/hamlit-block), too, for `capture` support. This will slightly change semantics with blocks, as follows. # TODO
+Note that you need [hamlit-block](https://github.com/hamlit/hamlit-block), too, for `capture` support.
+This will slightly change semantics with blocks, as follows. # TODO
+
+Add this lines to your application's Gemfile:
+
+```ruby
+gem "cells-hamlit"
+gem "hamlit-block"
+```
 
 ## Capture
 
