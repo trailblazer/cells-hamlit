@@ -8,3 +8,4 @@ require "cells"
 require_relative 'dummy/config/environment'
 
 require "cells-hamlit"
+require "hamlit/block"

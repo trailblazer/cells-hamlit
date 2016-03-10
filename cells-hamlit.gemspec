@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "cells", "~> 4.0"
   spec.add_dependency "hamlit"
+  spec.add_development_dependency "hamlit-block", "~> 0.3.0"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
 end
