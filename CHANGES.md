@@ -1,3 +1,7 @@
+# 0.2.0
+
+* `hamlit-block` is now optional. Read the README for details.
+
 # 0.1.1
 
 * Now using `hamlit-block` for capturing.
