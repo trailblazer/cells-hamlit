@@ -1,3 +1,4 @@
+require "cells"
 require "hamlit"
 
 module Cell
