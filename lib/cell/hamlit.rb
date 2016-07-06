@@ -7,7 +7,8 @@ module Cell
       {
         escape_html:    false,
         template_class: ::Hamlit::Template,
-        suffix:         "haml"
+        suffix:         "haml",
+        buffer:         '@output_buffer',
       }
     end
 
@@ -23,14 +24,26 @@ module Cell
       "#{form_tag_html(html_options)}" << content.to_s << "</form>"
     end
 
-    # with fine Hamlit, we don't need magical output buffers since yielding a block returns the
-    # content.
     def with_output_buffer(block_buffer=ViewModel::OutputBuffer.new)
+      @output_buffer, old_buffer = block_buffer, @output_buffer
       yield
+      block_buffer
+    ensure
+      @output_buffer = old_buffer
     end
 
     def capture(*args)
-      yield(*args)
+      value = nil
+      buffer = with_output_buffer { value = yield(*args) }
+      buffer.to_s if buffer.size > 0
+      value
+    end
+
+    def render_template(*)
+      old_output_buffer = @output_buffer
+      super
+    ensure
+      @output_buffer = old_output_buffer
     end
 
     # def form_tag_html(html_options)
