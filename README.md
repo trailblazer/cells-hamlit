@@ -2,7 +2,6 @@
 
 Hamlit support for Cells. [Hamlit](https://github.com/k0kubun/hamlit) is a faster implementation of Haml.
 
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,13 +20,6 @@ gem "cells-hamlit"
 gem "hamlit-block"
 ```
 
-## Capture
-
-```haml
-- content = capture do
-  = "takashi is king!"
-```
-
 To capture strings, the `=` directive is needed in the block.
 
 ## HTML Escaping
@@ -37,16 +29,11 @@ Cells doesn't escape except when you tell it to do. However, you may run into pr
 As a first step, try this and see if it helps.
 
 ```ruby
-class SongCell < Cell::ViewModel
-  include ActionView::Helpers::FormHelper
-  include Cell::Hamlit # include Haml _after_ AV helpers.
-
-  # ..
-end
+class SongCell < Cell::ViewModelHaml
 ```
 
 If that doesn't work, [read the docs](http://trailblazer.to/gems/cells).
 
-## Dependencies
+## Note
 
-This gem works with Tilt 1.4 and 2.0, and hence allows you to use it from Rails 3.2 upwards.
+This gem should not be used with `cells-haml`

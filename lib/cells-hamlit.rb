@@ -1,1 +1,1 @@
-require 'cell/hamlit'
+require "cell/hamlit"
