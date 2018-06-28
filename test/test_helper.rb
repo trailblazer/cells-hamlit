@@ -1,11 +1,3 @@
-require "pp"
-require 'minitest/autorun'
-
-ENV['RAILS_ENV'] = 'test'
-
-
-require "cells"
-require_relative 'dummy/config/environment'
-
+require "minitest/autorun"
 require "cells-hamlit"
-require "hamlit/block"
+require_relative "cells/song_cell"
